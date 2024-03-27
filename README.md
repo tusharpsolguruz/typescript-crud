@@ -1,1 +1,1 @@
-# addthis is my typescript repo
+# this is my typescript repo
