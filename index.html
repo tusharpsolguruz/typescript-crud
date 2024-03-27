@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typescript</title>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="main">
+    <div class="form-container">
+    <table>
+        <tr>
+            <td>
+                <h2>ADD PRODUCT</h2>
+                <form id="productForm" autocomplete="off" onsubmit="onFormSubmit(event)">
+                    <div>
+                        <label for="productId">Product ID</label>
+                        <input type="number" name="productId" id="productId">
+                    </div>
+                    <div>
+                    <span class="error" style="display: none;margin-top:5px" id="productIdError"></span>
+                    </div><br>
+                    <div>
+                        <label for="productPartNo">Product PartNo</label>
+                        <input type="number" name="productPartNo" id="productPartNo">
+                       
+                    </div>
+                    <div>
+                    <span class="error" style="display: none;margin-top:5px" id="productPartNoError"></span>
+                    </div><br>
+                    <div>
+                       
+                        <label for="productName">Product Name</label>
+                        <input type="text" name="productName" id="productName">
+                    </div>
+                    <div>
+                    <span class="error" style="display: none;margin-top:5px" id="productNameError"></span>
+                    </div><br>
+                   
+                    
+                    
+                    <div>
+                        <label for="productDescription">Product Description</label>
+                        <textarea name="productDescription" id="productDescription" cols="20" rows="5"></textarea>
+                    </div>
+                    <div>
+                    <span class="error" style="display: none;margin-top:5px" id="productDescriptionError"></span>
+                    </div>
+                    <br>
+                    
+                    <span id="submitBtn">
+                    <div class="form-action-button">
+                        <input type="submit" value="submit">
+                    </div>
+                    </span>
+
+                    
+                   
+                        
+                </form>
+                <!-- <button class="product-btn"  id="addWeight-btn" onclick="addWeightProduct()">Add Weight</button>
+                 <button class="product-btn" style="display: none;" id="done-btn" onclick="weightDone()">submit weight Details</button>
+                <button class="product-btn" style="display: none;" id="hide-weightDetails" onclick="hideWeightDetailsForm()">Hide Weight Details</button>
+                <button class="product-btn"  id="addCompany-btn" onclick="addCompanyDetails()">Add Company Details</button>
+                 <button class="product-btn" style="display: none;" id="company-btn" onclick="submitCompanyDetails()">submit company Details</button>
+                <button class="product-btn" style="display: none;" id="hide-companyDetails" onclick="hideCompanyDetailsForm()">Hide Company Details</button> -->
+                <span id="updateBtn" style="display: none; margin-top: 5px;">
+                    <div class="form-action-button">
+                        <button onclick="updateProduct()">Update</button>
+                    </div>
+                </span>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <div class="table-container">
+                <table class="list" id="storeList">
+                    <thead>
+                        <tr>
+                            
+                            <input type="search" id="searchProduct" oninput="searchProduct()" placeholder="Search for names.." title="Type in a name">
+                            <button class="product-btn" onclick="removeProduct()">Remove Product</button>
+                            <!-- <button class="product-btn" onclick="removeCompanyDetails()">Remove Company Details</button> -->
+                            <button class="product-btn" onclick="modifyProduct()">Modify Product</button>
+                            <!-- <button class="product-btn" onclick="modifyWeight()">Modify Weight</button> -->
+                            <!-- <button class="product-btn" onclick="modifyCompanyDetails()">Modify Company Details</button> -->
+                            <div style="color: white; font-size:20px;">
+                            <label for="sortProduct">Sort Product</label>
+                            <select name="sortProduct" id="sortProduct" style="height: 35px;margin-left: 15px;">
+                                <option value="normal">Normal</option>
+                                <optgroup label="Product Id"></optgroup>
+                                <option value="productIdASC">Product Id ASC</option>
+                                <option value="productIdDESC">Product Id DESC</option>
+                                <optgroup label="Product Part No">
+                                <option value="productPartNoASC">Product Part No ASC</option>
+                                <option value="productPartNoDESC">Product Part No DESC</option>
+                                </optgroup>
+                                <optgroup label="Product Name">
+                                <option value="productNameASC">Product Name ASC</option>
+                                <option value="productNameDESC">Product Name DESC</option>
+                                </optgroup>
+
+                              
+                                
+                            </select>
+                            <button onclick="sortingProduct()">sort product</button>
+                        </div>
+                        </tr>
+                        
+                        <tr>
+                            
+                            <th>Product ID</th>
+                            <th>Product PartNo</th>
+                            <th>Product Name</th>
+                            
+                            <th>Product Description</th>
+                            <!-- <th>Action</th> -->
+                        </tr>
+                        <tr>
+                            <p id="searchError"></p>
+                        </tr>
+                       
+                    </thead>
+                    <tbody id="data">
+                        
+                    </tbody>
+                    <tr>
+                        <p id="searchData"></p>
+                    </tr>
+                </table>
+              
+    </div>
+</div>
+
+</body>
+</html>

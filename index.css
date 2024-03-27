@@ -1,0 +1,91 @@
+.main{
+    display: flex;
+   
+}
+body {
+    background: linear-gradient(to right, blue, violet);
+    padding: auto;
+}
+
+.container {
+   justify-content: left;
+   width: 50%;
+
+}
+
+
+.form-container {
+    width: 400px; 
+    height: 400px;;/* Set a fixed width for the form container */
+}
+.table-container {
+    width:50%;
+    justify-content: right;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+table {
+    width: 100%;
+    margin-top: 20px; 
+    background: white;
+}
+
+table.list {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px; 
+}
+th, td {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px 15px;
+}
+input[type="text"], input[type="number"], input[type="search"], textarea {
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+}
+input[type="submit"], input[type="reset"] {
+    background:palegreen;
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background: #4b99d8;
+}
+button {
+    background: #eee;
+    padding: 6px 12px;
+    margin: 15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+.error {
+    color: red;
+}
+button:hover {
+    background: blueviolet;
+}
+h2{
+    text-align: center;
+}
+textarea
+{
+    resize: none;
+}
+.product-btn{
+    margin: 20px;
+}
